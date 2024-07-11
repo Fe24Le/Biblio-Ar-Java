@@ -3,7 +3,7 @@
 Libreria online Venta de Libros, Comic, Ebook, seleccionados.
 
 <p align="center">
-  <img src="fondodetalle.png" alt="Vista Previa de la Página de Libros" width="20%">
+  <img src="fondodetalle.jpg" alt="Vista Previa de la Página de Libros" width="20%">
 </p>
 
 
@@ -21,7 +21,7 @@ Libreria online Venta de Libros, Comic, Ebook, seleccionados.
 ## Vista Previa
 
 <p align="center">
-  <img src="previa_web.png" alt="Vista Previa de la Página de Libros" width="60%">
+  <img src="previa_web.jpg" alt="Vista Previa de la Página de Libros" width="60%">
 </p>
 
  Biblio-AR [Home](https://fe24le.github.io/Biblio-AR/)
