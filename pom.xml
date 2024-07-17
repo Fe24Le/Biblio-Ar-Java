@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ar.proyectoCodo</groupId>
-    <artifactId>proyectoJava_Biblio</artifactId>
+    <artifactId>proyectoJava_biblio_v2</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
-    <name>proyectoJava_Biblio</name>
+    <name>proyectoJava_biblio_v2</name>
     
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -65,6 +65,6 @@
             </plugin>
         </plugins>
         <!-- Nombre final del archivo WAR generado -->
-        <finalName>proyectoJava_biblio32</finalName>
+        <finalName>proyectoJava_biblio_v2</finalName>
     </build>
 </project>

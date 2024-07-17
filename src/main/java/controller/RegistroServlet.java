@@ -1,4 +1,3 @@
-
 package controller;
 
 import java.io.IOException;
@@ -13,7 +12,18 @@ import modelo.Usuario;
 
 @WebServlet("/registro")
 public class RegistroServlet extends HttpServlet {
+    //Se utiliza para asegurar la consistencia
+    //en la serialización de la clase cuando se gestiona el estado de un servlet en un entorno distribuido.
+    //private static final long serialVersionUID = 1L;
 
+//    HttpServletRequest request:
+//    Es un objeto que encapsula toda la información de la solicitud HTTP enviada por el cliente.
+//    
+//    HttpServletResponse response:
+//    Es un objeto que permite al servlet construir y enviar la respuesta HTTP al cliente.
+//    Estos objetos son pasados automáticamente por el contenedor de servlets
+//    a los métodos doGet(), doPost() cuando se realiza una solicitud al servlet.
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Obtener parámetros de la solicitud
         String nombre = request.getParameter("nombre");
@@ -34,11 +44,11 @@ public class RegistroServlet extends HttpServlet {
         usuario.setPais(pais);
 
         UsuarioDAO usuarioDAO = new UsuarioDAO();
-        try {
-            usuarioDAO.insertarUsuario(usuario);
-            response.sendRedirect("pages/registrarse.html?exito=true");
-        } catch (Exception e) {
-            response.sendRedirect("pages/registrarse.html?error=true");
+        boolean registroExitoso = usuarioDAO.insertarUsuario(usuario);
+        if (registroExitoso) {
+            response.sendRedirect("pages/iniciosesion.html");
+        } else {
+            response.sendRedirect("pages/registrarse.html");
         }
     }
 }
